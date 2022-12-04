@@ -1,0 +1,204 @@
+body {background-color: rgb(50, 55, 65);}
+
+.site-logo {
+  --clr-neon: rgb(255, 222, 189);
+
+  font-size: 1.2em;
+  color: var(--clr-neon) !important;
+  border: var(--clr-neon) 1px solid;
+  border-radius: 0.25em;
+  padding: .5em 1em;
+
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0 0 0.25em hsl(0 0% 100% / 0.5), 
+               0 0 0.5em var(--clr-neon);
+  box-shadow:  inset 0 0 0.7em 0 var(--clr-neon),
+               0 0 0.7em 0 var(--clr-neon);
+}
+
+header{
+  --text: white;
+  --text-inverse: rgb(105, 130, 155);
+  --background: rgb(215, 105, 45);
+
+  color: var(--text);
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 4em;
+
+  transition: background 250ms ease-in;
+  background: var(--background);
+}
+
+/* End Header */
+
+/* -- Nav -- */
+
+.navmenu {
+  display: flex;
+  width: 100%;
+  top:0%;
+  left: 0%;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  background: transparent;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0em 5em 0em 0em; 
+  padding: 0;
+  display: flex;
+}
+
+.nav__list-item-falldown > .nav__list__falldown{
+  list-style: none;
+  padding: 0;
+  display: none;
+  transition: display 2s ease-in-out;
+}
+
+.nav__list-item-falldown:hover > .nav__list__falldown {
+  display:block;
+}
+
+.nav__link {
+  --spacing: 1em;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  position: relative;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  padding: 0.5em;
+  letter-spacing: 0.1em;
+}
+
+/* Nav Links */
+
+.nav__link::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing);
+  right: var(--spacing);
+  height: 1px;
+  background: currentColor;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.nav__link:hover::after{
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+/* -- End Nav -- */
+
+a{
+  font: 1em 'opensans-bold', sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+/* -- Forms -- */
+
+.forms{
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+.form__header{
+  font: 2.5em 'Calibri', sans-serif;
+  color: #ffffff;
+}
+
+.form__box {
+  display: inline-block;
+  background-color: rgba(19, 65, 120, 0.75);
+  border: 5px solid rgb(30, 100, 190);
+  border-radius: 1em;
+  padding: 2.5em 15em 5em 5em;
+  text-align: left;
+}
+
+.form__input_text {
+  width: 15em;
+  padding: 0.75em 0em;
+  color: black;
+  font: 1em 'Calibri', sans-serif;
+}
+
+.form__input_date, #combobox_destino {
+  padding: 0.75em 0em;
+  color: black;
+  font: 1em 'Calibri', sans-serif;
+}
+
+.form__input_text::placeholder {
+  color: gray;
+  font: 1em 'Calibri', sans-serif;
+}
+
+h2 {
+  font: 1.5em 'Calibri', sans-serif;
+  color: #ffffff;
+}
+
+h3 {
+  font: 1.25em 'Calibri', sans-serif;
+  color: #ffffff;
+}
+
+p {
+  font: 0.8em 'Calibri', sans-serif;
+  color: #ffffff;
+}
+
+label {
+  font: 1.1em 'Calibri', sans-serif;
+  color: #ffffff;
+}
+
+button, .btn{
+  --background: rgb(20, 50, 85);
+
+  font: 1em 'Calibri', sans-serif;
+  color:#ffffff;
+  background-color: var(--background);
+  border: 1px solid var(--background);
+  border-radius: 1em;
+  padding: 1.5em 2.75em;
+  cursor: pointer;
+
+  transition: 0.5s ease-in-out;
+}
+
+button:hover, .btn:hover{
+  --background:rgb(5, 20, 30);
+}
+
+#contenedor{
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#filtros{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}

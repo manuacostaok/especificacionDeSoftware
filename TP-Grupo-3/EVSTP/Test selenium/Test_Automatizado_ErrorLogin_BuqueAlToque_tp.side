@@ -1,0 +1,123 @@
+{
+  "id": "ab6562a7-f24b-4f78-b253-b7ac6d4024c5",
+  "version": "2.0",
+  "name": "Test_Automatizado_ErrorLogin_BuqueAlToque_tp",
+  "url": "https://inkdesign.com.ar",
+  "tests": [{
+    "id": "beed9a2f-5abe-4dba-bf40-37bbb7f74b9d",
+    "name": "LoginConError",
+    "commands": [{
+      "id": "bb5cbf80-5281-4915-8683-47f17a0f34d4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e27d4e1-be34-4372-b7f1-7a5d2c05d288",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6954f4d-65b7-4069-b406-a30d02b79f77",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.nav__list-item:nth-child(1) > .nav__link--btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//header[@id='home']/nav[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'login.html')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ffb0f22-06f8-4652-b184-6cde38753eff",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='detalle']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dba56deb-85ef-4c61-8d1e-d6d2907e6e00",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='detalle']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ejemplo"
+    }, {
+      "id": "f00afc89-f971-4485-8623-566d70cd5a12",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='detalle']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "ejemplo1"
+    }, {
+      "id": "ce2152f5-653a-40c3-a638-429f83e951ec",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//form[@id='login']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e5740a6-fcab-4085-aa6e-ac2e4c23c498",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Aceptar",
+      "targets": [
+        ["linkText=Aceptar", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Aceptar')]", "xpath:link"],
+        ["xpath=//a[@onclick='login()']", "xpath:attributes"],
+        ["xpath=//form[@id='login']/a[2]", "xpath:idRelative"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Aceptar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e629a10-d001-42ae-b1cf-8f24574b4727",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Los datos ingresados son incorrectos",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "054bfe56-92eb-4a14-a651-dd56f2cdecc6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://inkdesign.com.ar/"],
+  "plugins": []
+}

@@ -1,0 +1,124 @@
+.row {
+    position: relative;
+    --bs-gutter-x: 100px;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -90);
+
+}
+
+.card {
+	padding: 0 5px 0 5px;
+	width: 300px;
+    height: 600px;
+	border: 3px solid #b7d6f3;
+	background-color: rgba(0, 0, 0, 0.85);
+	text-align: flex;
+	border-radius: 10px;
+}
+
+.card img{
+    margin-left: 12px;
+}
+
+.card-text {
+	margin-left: 25px;
+	font-size: 16px;
+	color: rgb(35,35,35);
+	text-align: left;
+}
+
+div[class=card]{
+    overflow: auto;
+}
+
+
+/* Nav Menu */
+
+#navmenu {
+    background-color: rgb(150, 40, 15);/*Rojizo para Resaltar*/
+    display:flex;
+    top: 0%;
+    left: 0%;
+    width:100%;
+    height:50px;
+    justify-content: center;
+}
+
+/* Items del Menu */
+
+#navmenu ul, ol, li {
+    list-style:none;
+    padding:0px;
+    display:block;
+}
+
+#navmenu > li {
+    float: left;
+}
+
+#navmenu li ul{
+    top:42px;
+    display:none;
+    position:absolute;
+    min-width: 140px;
+}
+
+#navmenu li:hover > ul{
+    display:block;
+
+}
+
+#navmenu input[type=text] {
+    background-color: rgb(150, 40, 15);/*Rojizo para Resaltar*/
+    color : white;                     /*Color Fuente*/
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    height: 48px;
+    width: 100px;
+    transition-duration: 0.4s;
+    transition: width 0.5s ease-in-out;  /*Efecto expandir*/
+}
+
+#navmenu input::placeholder {
+   color : white;                     /*Color Fuente*/
+}
+
+#navmenu input[type=text]:focus {
+    width: 100%; 
+}
+
+#navmenu input[type=text]:hover {
+    background-color: rgb(100, 25, 10);
+}
+
+#navmenu .button {
+    background-color: rgb(150, 40, 15); /*Color Rojo como resalte*/
+    border: 0.5px;
+    color: rgb(255, 255, 255);          /*Color Fuente*/
+    padding: 16px 40px;
+    width:100%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+  }
+
+  #navmenu .button:hover{
+    background-color: rgb(100, 25, 10);
+  }
+
+  #navmenu .button:disabled{
+      opacity:0.6;
+      cursor: not-allowed;
+  }
+
+
+/* Fin Menu */
+

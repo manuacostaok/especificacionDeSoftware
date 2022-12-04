@@ -1,0 +1,117 @@
+{
+  "id": "b7ecbfcc-0a02-43ed-a3fd-a10b43b360a3",
+  "version": "2.0",
+  "name": "BusquedaTestAutomatizacion",
+  "url": "https://inkdesign.com.ar",
+  "tests": [{
+    "id": "c5747895-9692-4085-a5ad-1501a9ee3f17",
+    "name": "busqueda ",
+    "commands": [{
+      "id": "4edc1eff-8ab9-4827-8760-4f767cd95293",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a8d4c5d-ae01-4d0c-92be-b06171038150",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1374x748",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e463d11-2836-467c-8796-f033198a47e4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Pasajes",
+      "targets": [
+        ["linkText=Pasajes", "linkText"],
+        ["css=.nav__list__falldown > .nav__list-item:nth-child(1) > .nav__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Pasajes')]", "xpath:link"],
+        ["xpath=//nav[@id='main-nav']/ul/li/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'busquedaPasajes.html')]", "xpath:href"],
+        ["xpath=//li/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Pasajes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64f61c30-a860-4e3b-a2e0-baa4ac4488c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=filtroFecha",
+      "targets": [
+        ["id=filtroFecha", "id"],
+        ["css=#filtroFecha", "css:finder"],
+        ["xpath=//input[@id='filtroFecha']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8de6ef8-60ed-4201-ad86-37b3fc3b9e4e",
+      "comment": "",
+      "command": "click",
+      "target": "id=filtroFecha",
+      "targets": [
+        ["id=filtroFecha", "id"],
+        ["css=#filtroFecha", "css:finder"],
+        ["xpath=//input[@id='filtroFecha']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e78c6615-3dbf-4f27-91d6-301c9bd633f7",
+      "comment": "",
+      "command": "click",
+      "target": "id=combobox_destino",
+      "targets": [
+        ["id=combobox_destino", "id"],
+        ["css=#combobox_destino", "css:finder"],
+        ["xpath=//input[@id='combobox_destino']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9108ce75-8390-4fca-96e4-db021bb07476",
+      "comment": "",
+      "command": "type",
+      "target": "id=combobox_destino",
+      "targets": [
+        ["id=combobox_destino", "id"],
+        ["css=#combobox_destino", "css:finder"],
+        ["xpath=//input[@id='combobox_destino']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Argentina"
+    }, {
+      "id": "3f6d96ab-b70d-408e-9929-d30a1a052ebb",
+      "comment": "",
+      "command": "click",
+      "target": "id=botonBuscar",
+      "targets": [
+        ["id=botonBuscar", "id"],
+        ["name=buttonEstilo", "name"],
+        ["css=#botonBuscar", "css:finder"],
+        ["xpath=//button[@id='botonBuscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5a6f8607-66aa-46b1-941f-d5da02e51776",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c5747895-9692-4085-a5ad-1501a9ee3f17"]
+  }],
+  "urls": ["https://inkdesign.com.ar/"],
+  "plugins": []
+}

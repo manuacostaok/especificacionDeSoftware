@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+    <head>
+        <title>Registro</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=auto, initial-scale=1">
+        <!-- Jquery -->
+        <script src="./librerias/jquery-3.5.1.min.js"></script>   
+
+        <!-- javascript-->
+        <script type="text/javascript" src="./Javascript/userform.js"></script>
+        <script type="text/javascript" src="./Javascript/edicionescss.js"></script>
+
+        <!-- datos hardcodeados-->
+        <script src="./datosHardcodeados/filtros.js"></script>
+
+        <!-- css -->
+        <link rel="stylesheet" href="./CSS/estiloGeneral.css">
+        <link rel="stylesheet" href="./CSS/articulosform.css">
+    </head>
+    <body>
+        <header id="home">
+            <a href="index.html" class="site-logo">BuqueAlToque</a>
+            <nav id=main-nav>
+                <ul class="nav__list">
+                    <li class="nav__list-item-falldown"><a class="nav__link">Productos</a>
+                        <ul class="nav__list__falldown">
+                            <li class="nav__list-item"><a class="nav__link" href='busquedaPasajes.html'>Pasajes</a></li>
+                            <li class="nav__list-item"><a class="nav__link" href='#' style="pointer-events: none">Paquetes</a></li>
+                            <li class="nav__list-item"><a class="nav__link" href='#' style="pointer-events: none">Servicios</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__list-item"><a class="nav__link" href='#' style="pointer-events: none">Contactanos</a></li>
+                    <li class="nav__list-item"><a class="nav__link" href='#' style="pointer-events: none">VIP</a></li>
+                </ul>
+            </nav>
+            <nav class="account">
+                <ul class="nav__list">
+                  <li class="nav__list-item">
+                    <a class="nav__link nav__link--btn" href="login.html">Login</a></li>
+                  <li class="nav__list-item">
+                    <a class="nav__link nav__link--btn nav__link--btn--highlight" href="registro.html">Registrate</a></li>
+                </ul>
+              </nav>                
+        </header>
+
+        <!--Formulario-->
+        <section class="forms">
+            <h1 class="form__header">Login</h1>
+            <div class="form__box" name="contenedor">
+                <form id="login">
+                    <div id="detalle">
+                        <h2>Email</h2>
+                        <input type="text" class="form__input_text" id="email" required>
+                        <h2>Contraseña</h2>
+                        <input type="password" class="form__input_text" id="password" pattern="[A-Za-z0-9]{8,}">
+                    </div>
+                    <br>
+                    <a onclick="emergenciaPass()" style="cursor:pointer;">¿Ha olvidado su contraseña?</a>
+                    <br>
+                    <div id="emergencia" style="display:none;">
+                        <h2>Contraseña de Emergencia</h2>
+                        <input type="password" class="form__input_text" id="passwordEM" pattern="[A-Za-z]{8,}">
+                    </div>
+                    <br><br><br>
+                    <a class="btn" onclick="login()">Aceptar</a>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>

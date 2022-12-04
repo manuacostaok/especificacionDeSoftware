@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Búsqueda de Pasajes</title>
+    <!-- Jquery -->
+    <script src="./librerias/jquery-3.5.1.min.js"></script>
+
+    <!-- javascript-->
+    <script type="text/javascript" src="./Javascript/userform.js"></script>
+    <script type="text/javascript" src="./Javascript/edicionescss.js"></script>
+    <script type="text/javascript" src="./Javascript/busqueda.js"></script>
+    <script type="text/javascript" src="./Javascript/filtros.js"></script>
+    <script src="./Javascript/setfunctions.js"></script>
+    <script src="./Javascript/auxiliares.js"></script>
+
+
+    <!-- datos hardcodeados-->
+    <script src="./datosHardcodeados/pasajes.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./CSS/estiloGeneral.css">
+    <link rel="stylesheet" href="./CSS/articulosform.css">
+    <link rel="stylesheet" href="./CSS/artesaniasVarias.css">
+
+
+  </head>
+  <body onload="bootstrap();">
+    <header id="home">
+      <a href="index.html" class="site-logo">BuqueAlToque</a>
+      <nav id=main-nav>
+          <ul class="nav__list">
+            <li class="nav__list-item-falldown"><a class="nav__link">Productos</a>
+                <ul class="nav__list__falldown">
+                    <li class="nav__list-item"><a class="nav__link" href='busquedaPasajes.html'>Pasajes</a></li>
+                    <li class="nav__list-item"><a class="nav__link" href='#' style="pointer-events: none">Paquetes</a></li>
+                    <li class="nav__list-item"><a class="nav__link" href='#' style="pointer-events: none">Servicios</a></li>
+                </ul>
+            </li>
+              <li class="nav__list-item"><a class="nav__link" href='#' style="pointer-events: none">Contactanos</a></li>
+              <li class="nav__list-item"><a class="nav__link" href='#' style="pointer-events: none">VIP</a></li>
+          </ul>
+      </nav>
+      <nav class="account">
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <a class="nav__link nav__link--btn" href="login.html">Login</a></li>
+            <li class="nav__list-item">
+              <a class="nav__link nav__link--btn nav__link--btn--highlight" href="registro.html">Registrate</a></li>
+          </ul>
+        </nav>                
+    </header>
+
+    <section class="forms">
+      <h2 class="form__header">Registrate</h2>
+      <div class="form__box" id="contenedor">
+        <h2>Búsqueda de Pasajes</h2>
+        <h3 style="font-size: 16px;">Puede usar los filtros por Fecha, Origen, Destino para filtrar los diferentes pasajes en oferta.</h3>
+        <div id="filtros">
+          <input type="date" class="form__input_date" id="filtroRangoFecha1" value="2022-05-31" min="2022-05-31" max="2022-12-31">
+          <input type="date" class="form__input_date" id="filtroRangoFecha2" value="2022-06-30" min="2022-06-10" max="2022-12-31">
+          <input type="text" class="form__input_text" id="filtroSalida" placeholder="Ingrese un lugar de salida">
+          <input type="text" class="form__input_text" id="filtroDestino" placeholder="Ingrese un lugar de destino">
+          <input type="checkbox" name="IdayVuelta" id="filtroIdaVuelta"><p>Ida y Vuelta</p>
+          <button id="botonBuscar" name ="buttonEstilo" class="botones_filtro" onclick="filtrarPasajes()" style="padding:1em 1.7em; margin-left: 2em;">Buscar</button>
+          <label id="mensaje_filtro"></label>
+        </div>
+      </div>
+      <br>
+      <div id="cajaPasajes" name="contenedor" class="form__box">
+        <h2>Artículos encontrados</h2>
+        <div class="row" id="rowCajaPasajes">
+        </div>
+      </div>  
+    </section>
+  </body>
+</html>
